@@ -1,16 +1,16 @@
-import "../styles/header.css"
+import "../styles/header.css";
 
-export function Header() {
+export function Header({ score,bestScore }) {
   return (
     <>
       <header>
         <h1>Random Memory Game</h1>
         <p>
           <span>
-            Score <span className="score">0</span>
+            Score <span className="score">{score}</span>
           </span>
           <span>
-            Best score <span className="bestScore">0</span>
+            Best score <span className="bestScore">{bestScore}</span>
           </span>
         </p>
       </header>

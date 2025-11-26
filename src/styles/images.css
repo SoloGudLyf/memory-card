@@ -1,0 +1,14 @@
+img {
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 7px;
+}
+
+img:hover {
+  transform: scale(103%);
+  transition: transform 0.2s ease-in-out 0.1s;
+}
+
+main{
+    text-align: justify;
+}

@@ -8,3 +8,7 @@ header p{
     display: flex;
     flex-direction: column;
 }
+
+p{
+    text-align: left;
+}

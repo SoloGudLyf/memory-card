@@ -54,19 +54,17 @@ export function RenderImages({ increaseScore, gameOver }) {
   const [clickedImages, setClickedImages] = useState([]);
 
   const handleClick = (e) => {
-    console.log(!clickedImages.includes(e.target.dataset.id));
-
     if (!clickedImages.includes(e.target.dataset.id)) {
       increaseScore();
       setClickedImages([...clickedImages, e.target.dataset.id]);
+      setImageUrlList(shuffle(imageUrlList));
     } else {
       setClickedImages([]);
       gameOver();
+      setImageUrlList(shuffle(imageUrlList));
     }
   };
 
-
-  // The component renders with the current state (initially [])
   return (
     <main>
       {imageUrlList.length === 0 ? (
@@ -84,4 +82,19 @@ export function RenderImages({ increaseScore, gameOver }) {
       )}
     </main>
   );
+}
+
+function shuffle(array) {
+  // Create a shallow copy to avoid modifying the original array
+
+  for (let i = array.length - 1; i > 0; i--) {
+    // Generate a random index from 0 to i (inclusive)
+    // eslint-disable-next-line react-hooks/purity
+    const j = Math.floor(Math.random() * (i + 1));
+
+    // Swap elements at index i and j
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+
+  return array;
 }

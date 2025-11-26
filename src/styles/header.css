@@ -1,21 +1,25 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header p{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.1rem;
+header p {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
 }
 
-p{
-    text-align: left;
+p {
+  text-align: left;
 }
 
-@media(max-width:600px){
-    header p{
-        font-size: 1rem;
-    }
+.score,.bestScore {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header p {
+    font-size: 1rem;
+  }
 }

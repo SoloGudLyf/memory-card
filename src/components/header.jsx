@@ -7,10 +7,10 @@ export function Header({ score,bestScore }) {
         <h1>Random Memory Game</h1>
         <p>
           <span>
-            Score <span className="score">{score}</span>
+            Score: <span className="score">{score}</span>
           </span>
           <span>
-            Best score <span className="bestScore">{bestScore}</span>
+            Best score: <span className="bestScore">{bestScore}</span>
           </span>
         </p>
       </header>

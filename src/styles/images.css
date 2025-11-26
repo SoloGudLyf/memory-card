@@ -9,12 +9,16 @@ img:hover {
   transition: transform 0.2s ease-in-out 0.1s;
 }
 
-main{
-    text-align: justify;
+main {
+  text-align: justify;
 }
 
-@media(max-width:800px){
-    main{
-        text-align: center;
-      }
+.footer {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  main {
+    text-align: center;
+  }
 }

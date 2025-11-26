@@ -12,3 +12,9 @@ img:hover {
 main{
     text-align: justify;
 }
+
+@media(max-width:800px){
+    main{
+        text-align: center;
+      }
+}

@@ -23,7 +23,7 @@ a:hover {
 }
 
 body {
-  margin: 0 10vw ;
+  margin: 0 10vw;
   min-width: 320px;
   min-height: 100vh;
   text-align: center;
@@ -63,5 +63,30 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (min-width: 1850px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 950px){
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  body {
+    margin: 0 2.5vw;
+  }
+  header p {
+    font-size: 1rem;
   }
 }

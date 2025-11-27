@@ -46,7 +46,9 @@ export function RenderImages({ increaseScore, gameOver }) {
     // 3. Wait for all promises to resolve
     Promise.all(fetchPromises).then((results) => {
       // 4. Filter out null results (errors/no hits) and update state
-      const validImages = results.filter((img) => img !== null);
+      const validImages = results.filter(
+        (img) => img !== null && isImageByExtension(img.url)
+      );
       setImageUrlList(validImages);
     });
   }, []);
@@ -97,4 +99,8 @@ function shuffle(array) {
   }
 
   return array;
+}
+
+function isImageByExtension(url) {
+  return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/i.test(url);
 }

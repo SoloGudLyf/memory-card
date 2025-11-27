@@ -7,8 +7,6 @@ function HeaderImageLink() {
   const [bestScore, setBestScore] = useState(0);
 
   const increaseScore = () => {
-    console.log("hi");
-
     setScore(score + 1);
   };
   const gameOver = () => {
